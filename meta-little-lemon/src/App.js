@@ -10,8 +10,8 @@ function App() {
   return (
     <>
     <Nav />
-    <About />
     <Specials />
+    <About />
     <Dishes />
     <Testimonials />
     <Footer />

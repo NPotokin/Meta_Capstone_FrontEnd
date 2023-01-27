@@ -3,7 +3,10 @@ import React from 'react'
 const About = () => {
   return ( 
     <>
-    <p>About</p>
+    <div className='bg-hl1 py-40'>
+      <p>hjsjdfgjs</p>
+
+    </div>
     </>
         
   )
