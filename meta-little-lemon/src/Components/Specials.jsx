@@ -13,13 +13,13 @@ const Specials = () => {
       {/* Container with main info about Specials */}
       <div className='max-w-7xl w-full mx-auto relative'>
         {/* Overlay */}
-        <div className='absolute w-full mx-auto h-full max-h-[400px] bg-prim1/50 hover:bg-prim1/70 flex 
-        flex-col justify-around rounded-3xl'>
-          <p className='text-hl2 text-4xl mx-auto md:text-5xl lg:text-6xl p-2 m-2 font-extrabold'>Check Out  
-          <span className='text-hl1'> Our Specials</span>  </p>
-          <p className='text-hl2 mx-auto text-4xl md:text-5xl lg:text-6xl p-2 m-2 font-extrabold'>
-          <span className='text-hl1'>Weekly</span>  and 
-          <span className='text-hl1'> Daily</span>  Options</p>
+        <div className='absolute w-full mx-auto h-full max-h-[400px] bg-prim1/60 hover:bg-prim1/70 flex 
+        flex-col justify-center rounded-3xl'>
+          <p className='text-hl1 text-4xl mx-auto md:text-5xl lg:text-6xl p-2 m-2 font-extrabold'>Check Out Our  
+          <span className='text-prim2'> Specials</span>  </p>
+          <p className='text-hl1 mx-auto text-4xl md:text-5xl lg:text-6xl p-2 m-2 font-extrabold'>
+          <span className='text-prim2'>Weekly</span>  and 
+          <span className='text-prim2'> Daily</span>  Options</p>
         </div>
         {/* Image */}
         <img 
@@ -27,6 +27,11 @@ const Specials = () => {
         src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" 
         />
       </div>
+      <h1 
+      className=" max-w-7xl mx-auto text-4xl md:text-5xl lg:text-6xl text-hl2 font-extrabold p-2 py-6 m-2 ">
+        Order <span className='text-prim1'> Delivery,</span> set up a 
+        <span className='text-prim1'> Pick up,</span> otherwise see you 
+        <span className='text-prim1'> in!</span></h1>
       {/* container with week and day specials */}
       <div className='max-w-7xl w-full mx-auto flex flex-col md:flex-row justify-between py-3 gap-3'>
         {/* container with week specials */}
