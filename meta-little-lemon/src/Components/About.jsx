@@ -5,7 +5,7 @@ const About = () => {
   return ( 
     <>
     {/* Container with BG and flex directions */}
-    <div className="max-w-full bg-hl1">
+    <div id="about" className="max-w-full bg-hl1">
       <div className='bg-hl1 max-w-7xl mx-auto flex flex-col'>
         
         {/* Main Container */}
@@ -27,7 +27,7 @@ const About = () => {
           </div>
           <img 
             className='w-full max-h-[500px] object-cover rounded-3xl'
-            src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" 
+            src="https://images.pexels.com/photos/3933217/pexels-photo-3933217.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" 
           />
 
 

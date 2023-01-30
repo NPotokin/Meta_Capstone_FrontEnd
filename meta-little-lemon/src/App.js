@@ -5,6 +5,9 @@ import Specials from "./Components/Specials";
 import Dishes from "./Components/Dishes";
 import Testimonials from "./Components/Testimonials";
 import Footer from "./Components/Footer";
+import Booking from "./Components/Booking";
+
+
 
 function App() {
   return (
@@ -13,10 +16,12 @@ function App() {
     <About />
     <Specials />
     <Dishes />
+    <Booking />
     <Testimonials />
     <Footer />
     </>
   );
 }
+
 
 export default App;
