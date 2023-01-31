@@ -50,8 +50,8 @@ const Dishes = () => {
             <div className='relative flex flex-col my-2 rounded-b-3xl'>
               {/* Overlay */}
               <div className='absolute w-full h-full bg-prim1/50 hover:bg-prim1/70 rounded-3xl'>
-                <p className='ml-3 mt-3 text-3xl md:text-2xl lg:text-3xl font-semibold text-prim2/80'>{item.name}</p>
-                <p className='ml-3 mt-3 text-xl font-semibold text-hl1/80'>{item.description}</p>
+                <p className='ml-3 mt-3 text-3xl md:text-2xl lg:text-3xl font-semibold text-prim2/90'>{item.name}</p>
+                <p className='ml-3 mt-3 text-xl font-semibold text-hl1/90'>{item.description}</p>
               </div>
 
               <img className='w-full h-full max-h-[300px] rounded-3xl object-cover' 
