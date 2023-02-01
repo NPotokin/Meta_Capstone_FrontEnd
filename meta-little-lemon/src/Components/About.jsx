@@ -19,10 +19,12 @@ const About = () => {
               <p className='text-hl1 text-xl my-auto md:text-2xl lg:text-3xl p-1 m-1 font-extrabold'>
                 We are family owned mediterranean restaurant, focused on traditional recipies served with the morden twist.
               </p>
-              <button
-              className='absolute bottom-2 right-8 w-36 p-2 mb-4 rounded-xl text-md font-semibold text-hl2
-               bg-prim2 hover:text-prim1 hover:bg-sec1 hover:scale-110 duration-500'>
-              Reserve A Table</button>
+              <a href="#booking">
+                <button
+                className='absolute bottom-2 right-8 w-36 p-2 mb-4 rounded-xl text-md font-semibold text-hl2
+                bg-prim2 hover:text-prim1 hover:bg-sec1 hover:scale-110 duration-500'>
+                Reserve A Table</button>
+              </a>
             </div>
           </div>
           <img 

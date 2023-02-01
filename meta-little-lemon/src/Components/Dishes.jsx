@@ -4,6 +4,14 @@ import { menuData } from '../data/menuData';
 const Dishes = () => {
   const [menuItems, setMenuItems] = useState(menuData);
 
+  const filterCategory = (category) => {
+    setMenuItems (
+      menuData.filter((item) => {
+        return item.category === category;
+      })
+    )
+  }
+
   return ( 
     <>
     <div  id="menu" className='w-full bg-hl1 flex flex-col'>
@@ -15,30 +23,37 @@ const Dishes = () => {
         
         {/* Buttons */}
         <div className='flex flex-row m-1 p-1 max-w-7xl'>
-          <button className='mx-auto my-auto w-auto p-2 rounded-xl text-md font-bold border-2 border-prim1
-           text-prim1 bg-hl1 hover:text-prim1 hover:bg-prim2 hover:scale-110 duration-500'>
+          <button
+          onClick={() => setMenuItems(menuData)}
+          className='mx-auto my-auto w-20 p-2 rounded-xl text-md font-bold border-2 border-prim1
+           text-prim1 bg-prim2 hover:text-prim1 hover:bg-hl1 hover:scale-110 duration-500'>
             All
           </button>
-          <button className='mx-auto my-auto w-auto p-2 rounded-xl text-md font-bold border-2 border-prim1
-           text-prim1 bg-hl1 hover:text-prim1 hover:bg-prim2 hover:scale-110 duration-500'>
+          <button
+          onClick={() => filterCategory("salad")}
+          className='mx-auto my-auto w-20 p-2 rounded-xl text-md font-bold border-2 border-prim1
+           text-prim1 bg-prim2 hover:text-prim1 hover:bg-hl1 hover:scale-110 duration-500'>
             Salad
           </button>
-          <button className='mx-auto my-auto w-auto p-2 rounded-xl text-md font-bold border-2 border-prim1
-           text-prim1 bg-hl1 hover:text-prim1 hover:bg-prim2 hover:scale-110 duration-500'>
+          <button
+          onClick={() => filterCategory("gyros")}
+          className='mx-auto my-auto w-20 p-2 rounded-xl text-md font-bold border-2 border-prim1
+           text-prim1 bg-prim2 hover:text-prim1 hover:bg-hl1 hover:scale-110 duration-500'>
             Gyros
           </button>
-          <button className='mx-auto my-auto w-auto p-2 rounded-xl text-md font-bold border-2 border-prim1
-           text-prim1 bg-hl1 hover:text-prim1 hover:bg-prim2 hover:scale-110 duration-500'>
+          <button
+          onClick={() => filterCategory('meat')}
+          className='mx-auto my-auto w-20 p-2 rounded-xl text-md font-bold border-2 border-prim1
+           text-prim1 bg-prim2 hover:text-prim1 hover:bg-hl1 hover:scale-110 duration-500'>
             Meat
           </button>
-          <button className='mx-auto my-auto w-auto p-2 rounded-xl text-md font-bold border-2 border-prim1
-           text-prim1 bg-hl1 hover:text-prim1 hover:bg-prim2 hover:scale-110 duration-500'>
+          <button
+          onClick={() => filterCategory("pizza")}
+          className='mx-auto my-auto w-20 p-2 rounded-xl text-md font-bold border-2 border-prim1
+           text-prim1 bg-prim2 hover:text-prim1 hover:bg-hl1 hover:scale-110 duration-500'>
             Pizza
           </button>
-          <button className='mx-auto my-auto w-auto p-2 rounded-xl text-md font-bold border-2 border-prim1
-           text-prim1 bg-hl1 hover:text-prim1 hover:bg-prim2 hover:scale-110 duration-500'>
-            Drinks
-          </button>
+          
         </div>
         {/* Grid */}
         <div className='max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-5'>

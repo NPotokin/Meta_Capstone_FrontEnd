@@ -4,7 +4,7 @@ import {BsInstagram, BsFacebook, BsReddit, BsTwitter } from "react-icons/bs"
 const Footer = () => {
   return ( 
     <>
-   <div className='w-full bg-hl1 mx-auto'>
+   <div className='w-full bg-hl1 mx-auto pt-12'>
     <div className='max-w-7xl w-full flex flex-col md:flex-row mx-auto'>
       <div className='flex flex-row mx-auto'>
         <img src={require("../Assets/footerLogo.png")} alt="" />

@@ -41,10 +41,12 @@ const Specials = () => {
            justify-around rounded-3xl p-2'>
             <p className='text-hl1 text-3xl md:text-4xl lg:text-5xl p-2 m-2 font-extrabold mx-auto'>
             Weekly Specials</p>
-            <button
-            className='mx-auto w-28 p-2 mb-4 rounded-xl text-md font-semibold text-hl2
-             bg-prim2 hover:text-prim1 hover:bg-sec1 hover:scale-110 duration-500'>
-              Order Now</button>
+            <a href="#menu" className='mx-auto'>
+              <button
+              className='mx-auto w-28 p-2 mb-4 rounded-xl text-md font-semibold text-hl2
+              bg-prim2 hover:text-prim1 hover:bg-sec1 hover:scale-110 duration-500'>
+                Order Now</button>
+            </a>
           </div>
             <img 
             className='w-full max-h-[300px] object-cover rounded-3xl'
@@ -57,10 +59,12 @@ const Specials = () => {
           flex flex-col justify-around rounded-3xl'>
             <p className='text-hl1 text-3xl md:text-4xl lg:text-5xl p-2 m-2 font-extrabold mx-auto'>
             Daily Specials</p>
-            <button
-            className='mx-auto w-28 p-2 mb-4 rounded-xl text-md font-semibold text-hl2
-             bg-prim2 hover:text-prim1 hover:bg-sec1 hover:scale-110 duration-500'>
-              Order Now</button>
+            <a href="#menu" className='mx-auto'>
+              <button
+              className='mx-auto w-28 p-2 mb-4 rounded-xl text-md font-semibold text-hl2
+              bg-prim2 hover:text-prim1 hover:bg-sec1 hover:scale-110 duration-500'>
+                Order Now</button>
+            </a>
           </div>
             <img 
             className='w-full max-h-[300px] object-cover rounded-3xl'
