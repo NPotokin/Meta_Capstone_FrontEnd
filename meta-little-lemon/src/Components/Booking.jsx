@@ -1,9 +1,12 @@
 import React from 'react'
+import BookingForm from '../Components/BookingForm'
 
 const Booking = () => {
   return ( 
     <>
-    <p id='booking' className='py-40 mx-auto bg-hl1 text-5xl border border-solid'>Booking</p>
+    <div id='booking' className='w-full bg-hl1 mx-auto'>
+      <BookingForm />
+    </div>
     </>
         
   )
