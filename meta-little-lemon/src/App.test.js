@@ -1,8 +1,26 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import App from './App';
 
-test('renders learn react link', () => {
+
+test('Renders the headings', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+  const headElement = screen.getByText("Book the table");
+  expect(headElement).toBeInTheDocument();
+
+  const reserveButton = screen.getByText("Make Your Reservation");
+  fireEvent.click(reserveButton);
+
+  const headingElementNew = screen.getByText("Select Date");
+  expect(headingElementNew).toBeInTheDocument();
+})
+
+test('Initialize or Update Times', () => {
+render(<App />);
+const reserveButton = screen.getByText("Make Your Reservation");
+fireEvent.click(reserveButton);
+
+const testTime = "17:00"
+userEvent.selectOptions(screen.getByLabelText("Select Time"),screen.getByRole('option', { name: testTime}))
+expect(screen.getByRole('option', { name: testTime}).selected).toBe(true);
+})

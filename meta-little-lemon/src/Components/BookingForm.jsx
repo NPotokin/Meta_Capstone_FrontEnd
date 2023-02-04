@@ -1,18 +1,29 @@
 import React from 'react'
 import { useState } from "react"
-import { availableTimes } from "../data/availableTimes"
 
 
-const BookingForm = () => {
+
+
+const BookingForm = (props) => {
     const [date, setDate] = useState("");
-    const [time, setTime] = useState("");
     const [guests, setGuests] = useState("");
     const [occasion, setOccasion] = useState("");
+    const [time, setTime] = useState("");
+
+
+    const handleSumbit = (e) => {
+        e.preventDefault();
+        };
+
+    const handleChanges = (e) => {
+        setDate(e);
+        props.dispatch(e)
+    }
 
   return ( 
     <>
     <div className='max-w-7xl mx-auto flex flex-col'>
-        <h1 
+        <h1 data-testid="bookthetable"
         className="max-w-7xl mx-auto text-4xl md:text-5xl lg:text-6xl text-hl2 font-extrabold p-2 py-6 m-2 ">
             Book the table   
             <span className='text-prim1'> now</span>  and prepare for  
@@ -21,39 +32,35 @@ const BookingForm = () => {
         {/* Form */}
         <div className='flex flex-col mx-auto border-2 border-prim1 rounded-3xl w-full justify-center p-3 m-3
          shadow-prim1 shadow-md'>
-            <form action="">
+            <h1 className='max-w-7xl mx-auto text-2xl md:text-3xl lg:text-4xl text-hl2 font-extrabold 
+            p-2 py-6 m-2 '>Book the table</h1>
+            <form onSubmit={handleSumbit}>
                  {/* Date */}
                 <div className='flex flex-col md:flex-row'>
-                    <label 
+                    <label htmlFor='res-date'
                     className='justify-left text-xl md:text-2xl lg:text-3xl text-prim1 font-extrabold  p-6' 
                     >Select Date
                     </label>
-                    <input value={date} onChange={ (e) => setDate(e.target.value)}
+                    <input value={date} onChange={ (e) => handleChanges(e.target.value)}
                     id="res-date"
                     className='text-xl md:text-2xl lg:text-3xl text-hl2 font-extrabold p-6 bg-hl1'
                     type="date" name="res-date"  placeholder='' />
                 </div>
                  {/* Time */}
                 <div className='flex flex-col md:flex-row'>
-                    <label 
+                    <label htmlFor='res-time'
                     className='justify-left text-xl md:text-2xl lg:text-3xl text-prim1 font-extrabold  p-6' 
                     >Select Time
                     </label>
-                    
-
-                    <select 
-                    value={time} onChange={(e) => setTime(e.target.value)}
-                    className='text-xl md:text-2xl lg:text-3xl text-hl2 font-extrabold p-6 bg-hl1'
-                    name="res-time" id="res-time">
-                        {availableTimes.map((item) =>
-                            <option value={item.value}>{item.value}</option>
-                        )} 
-                        
+                    <select id='res-time' value={time} onChange={(e) => setTime(e.target.value)}
+                    className='bg-hl1 text-lg md:text-xl lg:text-2xl text-prim1 font-bold '>
+                    <option key={time}>Select Time</option>   
+                    {props.availableTimes.availableTimes.map(availableTimes => {return <option key={availableTimes}>{availableTimes}</option>})}
                     </select>
                 </div>
                 {/* Guests */}
                 <div className='flex flex-col md:flex-row'>
-                    <label 
+                    <label htmlFor='guests'
                     className='justify-left text-xl md:text-2xl lg:text-3xl text-prim1 font-extrabold  p-6' 
                     >Number of Guests
                     </label>
@@ -64,7 +71,7 @@ const BookingForm = () => {
                 </div>
                 {/* Occasion */}
                 <div className='flex flex-col md:flex-row'>
-                    <label 
+                    <label htmlFor='occasion'
                     className='justify-left text-xl md:text-2xl lg:text-3xl text-prim1 font-extrabold  p-6'>
                     Occasion
                     </label>
