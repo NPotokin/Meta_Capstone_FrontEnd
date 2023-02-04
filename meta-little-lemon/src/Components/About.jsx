@@ -5,7 +5,7 @@ const About = () => {
   return ( 
     <>
     {/* Container with BG and flex directions */}
-    <div id="about" className="max-w-full bg-hl1">
+    <div id="about" className="max-w-full bg-hl1 py-20">
       <div className='bg-hl1 max-w-7xl mx-auto flex flex-col'>
         
         {/* Main Container */}

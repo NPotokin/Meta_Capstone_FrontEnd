@@ -1,25 +1,29 @@
 import React from 'react'
 import { useState } from "react"
-
-
-
+import { Link } from 'react-router-dom';
 
 const BookingForm = (props) => {
     const [date, setDate] = useState("");
     const [guests, setGuests] = useState("");
     const [occasion, setOccasion] = useState("");
-    const [time, setTime] = useState("");
+    const [time, setTime] = useState(props.availableTimes.map((time) => <option>{time}</option>));
 
+    function handleDate(e) {
+        setDate(e.target.value);
+
+        var stringify = e.target.value;
+        const date = new Date(stringify);
+
+        props.updateTimes(date);
+
+        setTime(props.availableTimes.map((time) => <option>{time}</option>));
+    }
 
     const handleSumbit = (e) => {
         e.preventDefault();
         };
 
-    const handleChanges = (e) => {
-        setDate(e);
-        props.dispatch(e)
-    }
-
+   
   return ( 
     <>
     <div className='max-w-7xl mx-auto flex flex-col'>
@@ -41,7 +45,7 @@ const BookingForm = (props) => {
                     className='justify-left text-xl md:text-2xl lg:text-3xl text-prim1 font-extrabold  p-6' 
                     >Select Date
                     </label>
-                    <input value={date} onChange={ (e) => handleChanges(e.target.value)}
+                    <input value={date} onChange={handleDate} required
                     id="res-date"
                     className='text-xl md:text-2xl lg:text-3xl text-hl2 font-extrabold p-6 bg-hl1'
                     type="date" name="res-date"  placeholder='' />
@@ -52,10 +56,9 @@ const BookingForm = (props) => {
                     className='justify-left text-xl md:text-2xl lg:text-3xl text-prim1 font-extrabold  p-6' 
                     >Select Time
                     </label>
-                    <select id='res-time' value={time} onChange={(e) => setTime(e.target.value)}
+                    <select id='res-time' value={time} 
                     className='bg-hl1 text-lg md:text-xl lg:text-2xl text-prim1 font-bold '>
-                    <option key={time}>Select Time</option>   
-                    {props.availableTimes.availableTimes.map(availableTimes => {return <option key={availableTimes}>{availableTimes}</option>})}
+                      {time}
                     </select>
                 </div>
                 {/* Guests */}
@@ -83,10 +86,12 @@ const BookingForm = (props) => {
                         <option value="Anniversary">Anniversary</option>
                     </select>
                 </div>
-                <button type='submit'
+                <Link 
+                to={props.submitForm ? "/confirmed" : ""} 
+                type='submit' 
                 className='mx-auto ml-6 mb-3 w-46 p-3 rounded-xl text-md font-semibold text-hl2
                 bg-prim2 hover:text-prim1 hover:bg-sec1 hover:scale-110 duration-500'>
-                Make Your Reservation</button>
+                Make Your Reservation</Link>
             </form>
             
         </div>
