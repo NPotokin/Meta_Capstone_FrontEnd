@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { useState } from "react"
 import { Link } from 'react-router-dom';
@@ -21,7 +22,14 @@ const BookingForm = (props) => {
 
     const handleSumbit = (e) => {
         e.preventDefault();
+        <Link to="/confimation"></Link>
         };
+
+    const validForm = () => {
+        return (
+        date !=="" && time !=="" && guests !=="" && occasion !==""
+        );
+    };
 
    
   return ( 
@@ -45,8 +53,7 @@ const BookingForm = (props) => {
                     className='justify-left text-xl md:text-2xl lg:text-3xl text-prim1 font-extrabold  p-6' 
                     >Select Date
                     </label>
-                    <input value={date} onChange={handleDate} required
-                    id="res-date"
+                    <input value={date} onChange={handleDate} 
                     className='text-xl md:text-2xl lg:text-3xl text-hl2 font-extrabold p-6 bg-hl1'
                     type="date" name="res-date"  placeholder='' />
                 </div>
@@ -56,7 +63,7 @@ const BookingForm = (props) => {
                     className='justify-left text-xl md:text-2xl lg:text-3xl text-prim1 font-extrabold  p-6' 
                     >Select Time
                     </label>
-                    <select id='res-time' value={time} 
+                    <select id='res-time'  
                     className='bg-hl1 text-lg md:text-xl lg:text-2xl text-prim1 font-bold '>
                       {time}
                     </select>
@@ -74,11 +81,11 @@ const BookingForm = (props) => {
                 </div>
                 {/* Occasion */}
                 <div className='flex flex-col md:flex-row'>
-                    <label htmlFor='occasion'
+                    <label htmlFor='occasion' 
                     className='justify-left text-xl md:text-2xl lg:text-3xl text-prim1 font-extrabold  p-6'>
                     Occasion
                     </label>
-                    <select 
+                    <select  
                     value={occasion} onChange={(e) => setOccasion(e.target.value)}
                     className=' text-xl md:text-2xl lg:text-3xl text-hl2 font-extrabold p-6 bg-hl1'
                     name="occasion" id="occasion">
@@ -86,12 +93,18 @@ const BookingForm = (props) => {
                         <option value="Anniversary">Anniversary</option>
                     </select>
                 </div>
+                
+                
+
                 <Link 
-                to={props.submitForm ? "/confirmed" : ""} 
+                to={validForm ? "/confirmed" : ""} 
                 type='submit' 
                 className='mx-auto ml-6 mb-3 w-46 p-3 rounded-xl text-md font-semibold text-hl2
                 bg-prim2 hover:text-prim1 hover:bg-sec1 hover:scale-110 duration-500'>
-                Make Your Reservation</Link>
+                    
+                Make Your Reservation 
+                    
+                </Link>
             </form>
             
         </div>

@@ -12,7 +12,7 @@ const ConfirmedBooking = () => {
           Congrats! Your  
           <span className='text-prim2'> Booking</span> is confirmed!</p>
       <Link to="/"
-        className='max-w-7xl mx-auto p-3 m-12 rounded-xl text-md font-semibold text-hl2
+        className='max-w-7xl mx-auto p-4 m-12 rounded-xl text-xl font-semibold text-hl2
          bg-prim2 hover:text-prim1 hover:bg-sec1 hover:scale-110 duration-500'>
         Got it!
        </Link>
