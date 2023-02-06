@@ -25,7 +25,7 @@ const Specials = () => {
         {/* Image */}
         <img 
         className='w-full max-h-[400px] object-cover rounded-3xl'
-        src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" 
+        src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="food" 
         />
       </div>
       <h1 
@@ -51,7 +51,7 @@ const Specials = () => {
           </div>
             <img 
             className='w-full max-h-[300px] object-cover rounded-3xl'
-            src="https://images.pexels.com/photos/10432701/pexels-photo-10432701.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
+            src="https://images.pexels.com/photos/10432701/pexels-photo-10432701.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="meal" />
         </div>
         {/* container with Daily specials */}
         <div className='max-w-7xl w-full relative mx-auto'>
@@ -69,7 +69,7 @@ const Specials = () => {
           </div>
             <img 
             className='w-full max-h-[300px] object-cover rounded-3xl'
-            src="https://images.pexels.com/photos/5953518/pexels-photo-5953518.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
+            src="https://images.pexels.com/photos/5953518/pexels-photo-5953518.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="pizza" />
         </div>
 
       </div>

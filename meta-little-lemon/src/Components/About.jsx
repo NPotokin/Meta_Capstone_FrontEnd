@@ -21,7 +21,7 @@ const About = () => {
                 We are family owned mediterranean restaurant, focused on traditional recipies served with the morden twist.
               </p>
               
-                <Link to="/booking"
+                <Link to="/booking" aria-label='On Click'
                 className='absolute bottom-2 right-8 w-36 p-2 mb-4 rounded-xl text-md font-semibold text-hl2
                 bg-prim2 hover:text-prim1 hover:bg-sec1 hover:scale-110 duration-500'>
                 Reserve A Table</Link>
@@ -30,7 +30,7 @@ const About = () => {
           </div>
           <img 
             className='w-full max-h-[500px] object-cover rounded-3xl'
-            src="https://images.pexels.com/photos/3933217/pexels-photo-3933217.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" 
+            src="https://images.pexels.com/photos/3933217/pexels-photo-3933217.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="chef prepares food" 
           />
 
 
