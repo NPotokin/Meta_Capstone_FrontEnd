@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Meta_Capstone_FrontEnd/static/css/main.40a95331.css",
+    "main.js": "/Meta_Capstone_FrontEnd/static/js/main.7fc8c766.js",
+    "static/js/787.3c1ec610.chunk.js": "/Meta_Capstone_FrontEnd/static/js/787.3c1ec610.chunk.js",
+    "index.html": "/Meta_Capstone_FrontEnd/index.html",
+    "main.40a95331.css.map": "/Meta_Capstone_FrontEnd/static/css/main.40a95331.css.map",
+    "main.7fc8c766.js.map": "/Meta_Capstone_FrontEnd/static/js/main.7fc8c766.js.map",
+    "787.3c1ec610.chunk.js.map": "/Meta_Capstone_FrontEnd/static/js/787.3c1ec610.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.40a95331.css",
+    "static/js/main.7fc8c766.js"
+  ]
+}
