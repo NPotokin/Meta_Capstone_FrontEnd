@@ -21,10 +21,10 @@ const About = () => {
                 We are family owned mediterranean restaurant, focused on traditional recipies served with the morden twist.
               </p>
               
-                <Link to="/booking" aria-label='On Click'
+                <a href="#booking" aria-label='On Click'
                 className='absolute bottom-2 right-8 w-36 p-2 mb-4 rounded-xl text-md font-semibold text-hl2
                 bg-prim2 hover:text-prim1 hover:bg-sec1 hover:scale-110 duration-500'>
-                Reserve A Table</Link>
+                Reserve A Table</a>
               
             </div>
           </div>

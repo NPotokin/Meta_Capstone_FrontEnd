@@ -1,7 +1,10 @@
 import Nav from "./Components/Nav";
-import InteractiveNav from "./Components/InteractiveNav";
 import Footer from "./Components/Footer";
-
+import Specials from "./Components/Specials";
+import About from "./Components/About";
+import Dishes from "./Components/Dishes";
+import Booking from "./Components/Booking";
+import Testimonials from './Components/Testimonials'
 
 
 function App() {
@@ -11,7 +14,11 @@ function App() {
   return (
     <>
     <Nav />
-    <InteractiveNav />
+    <Specials />
+    <About />
+    <Dishes />
+    <Booking />
+    <Testimonials />
     <Footer />
     </>
   );
