@@ -1,9 +1,10 @@
 
 import React from 'react'
 import { useState, useEffect } from "react"
-import { Link } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import { Formik, Form, Field } from "formik"
 import * as Yup from "yup"
+import ConfirmedBooking from './ConfirmedBooking'
 
 
 const BookingForm = () => {
@@ -116,6 +117,13 @@ const BookingForm = () => {
                 bg-prim2 hover:text-prim1 hover:bg-sec1 hover:scale-110 duration-500' >
                     <Link to="/confirmed">Make a Reservation</Link>
                 </button>
+
+                <Routes>
+                    <Route path="/confirmed" element={<ConfirmedBooking />} ></Route>
+                </Routes>
+
+
+                
             </Form>)}
 
         </Formik>

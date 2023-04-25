@@ -19,7 +19,7 @@ const Nav = () => {
             </button>
           </div>
           <nav className={ nav ? 'w-full flex flex-col md:flex-row mx-auto my-auto' : 'hidden'}>
-            <a href="#spesials" className="text-2xl md:text-3xl my-1  mx-auto text-prim1 font-extrabold hover:scale-105 hover:text-prim2 duration-500">Home</a>
+            <a href="#specials" className="text-2xl md:text-3xl my-1  mx-auto text-prim1 font-extrabold hover:scale-105 hover:text-prim2 duration-500">Home</a>
             <a href="#about" className="text-2xl md:text-3xl my-1  mx-auto text-prim1 font-extrabold hover:scale-105 hover:text-prim2 duration-500">About</a>
             <a href="#menu" className="text-2xl md:text-3xl my-1  mx-auto text-prim1 font-extrabold hover:scale-105 hover:text-prim2 duration-500">Menu</a>
             <a href="#booking" className="text-2xl md:text-3xl my-1  mx-auto text-prim1 font-extrabold hover:scale-105 hover:text-prim2 duration-500">Book a table</a>

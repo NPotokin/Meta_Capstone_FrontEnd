@@ -5,7 +5,8 @@ const Specials = () => {
   return ( 
     <>
     {/* Container Main */}
-    <div className='bg-hl1 max-w-full flex flex-col '>
+    <div id='specials'
+    className='bg-hl1 max-w-full flex flex-col '>
       <h1 
       className=" max-w-7xl mx-auto text-4xl md:text-5xl lg:text-6xl text-hl2 font-extrabold p-2 py-6 m-2 ">
         Updating menu items 
