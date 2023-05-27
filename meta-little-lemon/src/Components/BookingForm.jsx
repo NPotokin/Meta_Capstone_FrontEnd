@@ -118,9 +118,6 @@ const BookingForm = () => {
                     <Link to="/confirmed">Make a Reservation</Link>
                 </button>
 
-                <Routes>
-                    <Route path="/confirmed" element={<ConfirmedBooking />} ></Route>
-                </Routes>
 
 
                 
@@ -129,6 +126,9 @@ const BookingForm = () => {
         </Formik>
 
         </div>
+                <Routes>
+                    <Route path="/confirmed" element={<ConfirmedBooking />} ></Route>
+                </Routes>
         </>
             
       )

@@ -4,17 +4,19 @@ import { reviewData } from '../data/reviewData'
 import { useState } from 'react'
 
 const Testimonials = () => {
-    let i = 0;
+    const [i, setIndex] = useState(0);
     const [reviewItem, setReviewItem] = useState(reviewData[i]);
 
-    const nextItem =() => {
-      i < 2 ? i = i + 1 : i = 0;
-      setReviewItem(reviewData[i])
+    const nextItem = () => {
+      const newIndex = i < 2 ? i + 1 : 0;
+      setIndex(newIndex);
+      setReviewItem(reviewData[newIndex]);
     };
     
-    const prevItem =() => {
-      i >= 0 ? i = i + 1 : i = 0;
-      setReviewItem(reviewData[i - 1])
+    const prevItem = () => {
+      const newIndex = i > 0 ? i - 1 : 2;
+      setIndex(newIndex);
+      setReviewItem(reviewData[newIndex]);
     };
 
    return ( 
@@ -31,7 +33,9 @@ const Testimonials = () => {
           onClick={() => prevItem()}
           size={50} className="text-prim1 hover:text-prim2 m-auto" />
           <div className='flex flex-col'>
-            <div className='flex flex-col md:flex-row justify-around'>
+            <div 
+            key={reviewItem.number}
+            className='flex flex-col md:flex-row justify-around'>
               <img 
               className='max-w-xs md:max-w-sm max-h-sm rounded-full mx-auto' 
               src={reviewItem.img} alt={reviewItem.name} />

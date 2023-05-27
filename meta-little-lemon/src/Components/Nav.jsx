@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom'
 const Nav = () => {
 
   const [nav, setNav] = useState(true)
+  const [cart, setCart] = useState(false);
+  const handleCart = () => {
+    setCart(!cart);
+  }
 
   
   return ( 
@@ -14,7 +18,8 @@ const Nav = () => {
           <div className='max-w-7xl flex flex-row justify-between'>
             <img onClick={ () => setNav(!nav)}
             className='w-full max-w-[300px] cursor-pointer' src={require("../Assets/logo1.png")} alt="logo1" />
-            <button>
+            <button
+            onClick={handleCart}>
               <BsCartFill size={40} className="text-prim1 my-auto mx-6 hover:text-prim2 duration-500 hover:scale-105" />
             </button>
           </div>
